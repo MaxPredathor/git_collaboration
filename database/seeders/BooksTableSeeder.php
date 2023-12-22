@@ -21,13 +21,10 @@ class BooksTableSeeder extends Seeder
             $newbook = new Book();
             $newbook->title = $book['title'];
             $newbook->isbn = $book['isbn'];
-            $newbook->pages = $book['pages'];
-            $newbook->image = $book['image'];
-            $newbook->short_description = $book['short_description'];
-            $newbook->long_description = $book['long_description'];
+            $newbook->pages = $book['pageCount'];
+            $newbook->image = $book['thumbnailUrl'];
+            $newbook->long_description = $book['longDescription'];
             $newbook->status = $book['status'];
-            $newbook->authors = $book['authors'];
-            $newbook->category = $book['category'];
             $newbook->save();
         }
 
