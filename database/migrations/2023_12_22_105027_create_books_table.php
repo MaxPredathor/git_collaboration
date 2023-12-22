@@ -20,7 +20,7 @@ return new class extends Migration {
             $table->string('image', );
             $table->string('short_description');
             $table->string('long_description');
-            $table->sting('status');
+            $table->string('status');
             $table->string('authors');
             $table->string('category');
             $table->timestamps();
