@@ -13,15 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('books', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->string('isbn');
-            $table->unsignedSmallInteger('pages');
-            $table->string('image', );
-            $table->text('long_description');
-            $table->string('status');
-            $table->timestamps();
+        Schema::table('books', function (Blueprint $table) {
+            //
         });
     }
 
@@ -32,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('books');
+        Schema::table('books', function (Blueprint $table) {
+            //
+        });
     }
 };

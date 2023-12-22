@@ -15,6 +15,18 @@ class BooksTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $books = file_get_contents(__DIR__ . '/books_db.json');
+        $books = json_decode($books, true);
+        foreach ($books as $book) {
+            $newbook = new Book();
+            $newbook->title = $book['title'];
+            $newbook->isbn = $book['isbn'];
+            $newbook->pages = $book['pageCount'];
+            $newbook->image = $book['thumbnailUrl'];
+            $newbook->long_description = $book['longDescription'];
+            $newbook->status = $book['status'];
+            $newbook->save();
+        }
+
     }
 }
